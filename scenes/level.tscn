@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2bu51qfqe834"]
+
+[ext_resource type="PackedScene" uid="uid://diptlvjwrs3f" path="res://scenes/player.tscn" id="1_2q6dc"]
+[ext_resource type="Texture2D" uid="uid://bmhqkvxpsa4vo" path="res://icon.svg" id="2_w7c3h"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2q6dc"]
+distance = 20.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
+
+[node name="Level" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1155.0
+offset_bottom = 654.0
+color = Color(0.2736, 0.38, 0.307293, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_2q6dc")]
+position = Vector2(61, 610)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(-9, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(9, 648)
+shape = SubResource("WorldBoundaryShape2D_2q6dc")
+debug_color = Color(0.946604, 7.02709e-06, 0.587019, 0.42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(164, 596)
+scale = Vector2(0.365972, 0.365557)
+texture = ExtResource("2_w7c3h")
