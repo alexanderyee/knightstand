@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cda3sw0prfei0"
-path="res://.godot/imported/ATTACK 1.png-40cb32edcb8ee02bec181037f42fc374.ctex"
+uid="uid://dy2gt33nyw1lw"
+path="res://.godot/imported/Knight-Attack02-right.png-63cf996f2c272f0e373d2b09b66721ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/ATTACK 1.png"
-dest_files=["res://.godot/imported/ATTACK 1.png-40cb32edcb8ee02bec181037f42fc374.ctex"]
+source_file="res://assets/character/Knight-Attack02-right.png"
+dest_files=["res://.godot/imported/Knight-Attack02-right.png-63cf996f2c272f0e373d2b09b66721ae.ctex"]
 
 [params]
 
