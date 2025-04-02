@@ -16,7 +16,7 @@ offset_right = 1155.0
 offset_bottom = 654.0
 color = Color(0.2736, 0.38, 0.307293, 1)
 
-[node name="Player" parent="." instance=ExtResource("1_2q6dc")]
+[node name="Knight" parent="." instance=ExtResource("1_2q6dc")]
 position = Vector2(61, 610)
 
 [node name="Floor" type="StaticBody2D" parent="."]
