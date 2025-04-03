@@ -7,7 +7,7 @@ var last_facing_direction := 1.0
 
 func _physics_process(delta: float) -> void:
 	
-	var idle = !knight.velocity
+	var idle = !knight.velocity.x
 	
 	if !idle:
 		last_facing_direction = knight.velocity.x
