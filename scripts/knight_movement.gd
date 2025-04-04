@@ -6,13 +6,13 @@ extends Node2D
 var last_facing_direction := 1.0
 
 func _physics_process(delta: float) -> void:
-	
-	var idle = !knight.velocity.x
-	
-	if !idle:
-		last_facing_direction = knight.velocity.x
-		
-	animation_tree.set("parameters/idle/BlendSpace1D/blend_position", last_facing_direction)
-	animation_tree.set("parameters/walk/BlendSpace1D/blend_position", last_facing_direction)
+	#
+	#var idle = !knight.velocity.x
+	#
+	#if !idle:
+		#last_facing_direction = knight.velocity.x
+		#
+	#animation_tree.set("parameters/idle/BlendSpace1D/blend_position", last_facing_direction)
+	#animation_tree.set("parameters/walk/BlendSpace1D/blend_position", last_facing_direction)
 
 	pass
