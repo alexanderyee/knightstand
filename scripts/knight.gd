@@ -2,7 +2,7 @@ class_name Knight
 extends CharacterBody2D
 
 const SPEED = 100.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -250.0
 const ATTACK_ANIM_NAMES = ["attack1", "attack2", "attack3"]
 
 @onready var anim_tree: AnimationTree = $AnimationTree
