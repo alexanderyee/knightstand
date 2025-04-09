@@ -1,8 +1,9 @@
-[gd_scene load_steps=209 format=3 uid="uid://diptlvjwrs3f"]
+[gd_scene load_steps=210 format=3 uid="uid://diptlvjwrs3f"]
 
 [ext_resource type="Script" uid="uid://cq5yylbb7jayu" path="res://scripts/knight.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://jchtqe0617kd" path="res://assets/character/Knight-Attack01-left.png" id="2_3v2ag"]
 [ext_resource type="Script" uid="uid://lc2aslujcn8" path="res://scripts/knight_animation_tree.gd" id="2_ouiji"]
+[ext_resource type="Script" uid="uid://376pkjob6iy1" path="res://scripts/camera_2d.gd" id="2_tpjby"]
 [ext_resource type="Texture2D" uid="uid://do11mdgwaahxc" path="res://assets/character/Knight-Attack01-right.png" id="2_y4r1p"]
 [ext_resource type="Texture2D" uid="uid://dy2gt33nyw1lw" path="res://assets/character/Knight-Attack02-right.png" id="3_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://h1oot2utamcb" path="res://assets/character/Knight-Attack03-right.png" id="4_3v2ag"]
@@ -1640,6 +1641,7 @@ shape = SubResource("CapsuleShape2D_wnwbv")
 position = Vector2(0, -60)
 zoom = Vector2(4, 4)
 position_smoothing_speed = 1.0
+script = ExtResource("2_tpjby")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_tuyoq")
