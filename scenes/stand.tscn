@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://b7h6m2rwkso6r"]
+
+[ext_resource type="Script" uid="uid://bblgl6l2nlxjt" path="res://scripts/stand.gd" id="1_6rtbi"]
+[ext_resource type="Texture2D" uid="uid://4x447g6bh2xf" path="res://assets/character/wizard/Wizard-Idle.png" id="1_vltfo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6rtbi"]
+radius = 8.0
+height = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqsir"]
+atlas = ExtResource("1_vltfo")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k73y"]
+atlas = ExtResource("1_vltfo")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fbtv"]
+atlas = ExtResource("1_vltfo")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwlq1"]
+atlas = ExtResource("1_vltfo")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65y6y"]
+atlas = ExtResource("1_vltfo")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkoem"]
+atlas = ExtResource("1_vltfo")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_28ava"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqsir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k73y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fbtv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwlq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65y6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkoem")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Stand" type="CharacterBody2D"]
+script = ExtResource("1_6rtbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_6rtbi")
+debug_color = Color(0.624012, 0.417888, 0.85018, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_28ava")

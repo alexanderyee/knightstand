@@ -1,8 +1,8 @@
 class_name Knight
 extends CharacterBody2D
 
-const SPEED = 100.0
-const JUMP_VELOCITY = -250.0
+@export var speed = 100.0
+@export var jump_velocity = -250.0
 const ATTACK_ANIM_NAMES = ["attack1", "attack2", "attack3"]
 
 @onready var anim_tree: AnimationTree = $AnimationTree
@@ -23,15 +23,15 @@ func _physics_process(delta: float) -> void:
 	
 	# Handle jump.
 	if Input.is_action_just_pressed("knight_jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_knight_left", "move_knight_right")
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
 	
 	# Handle attack, walk, idle anims
 	# Blendtree params are set by KnightMovement and KnightMelee components
