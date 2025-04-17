@@ -1633,6 +1633,7 @@ animations = [{
 
 [node name="Knight" type="CharacterBody2D"]
 script = ExtResource("1_qhqgy")
+friction = 500.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_wnwbv")

@@ -6686,8 +6686,10 @@ collision_layer = 2
 
 [node name="Stand" parent="." instance=ExtResource("9_8c41q")]
 position = Vector2(-17, 606)
-collision_layer = 0
+collision_layer = 2
+speed = 130.0
 tether_tension = 5.405
+friction = 4.0
 
 [node name="WorldBoundary" type="StaticBody2D" parent="."]
 position = Vector2(-81, 10)
@@ -6697,7 +6699,11 @@ position = Vector2(-39, 592)
 shape = SubResource("WorldBoundaryShape2D_klq6b")
 debug_color = Color(0.922939, 0, 0.148091, 0.42)
 
-[node name="Line2D" type="Line2D" parent="."]
+[node name="DebugTether" type="Line2D" parent="."]
+visible = false
 width = 2.0
 default_color = Color(1, 0.26, 0.26, 1)
 script = ExtResource("10_olg7q")
+
+[node name="Line2D" type="Line2D" parent="."]
+default_color = Color(0.886275, 0.662745, 0.698039, 0.643137)

@@ -22,7 +22,6 @@ func _ready() -> void:
 			x_upper_bound = tilemap_layer_bounds_pixels.end.x
 		if tilemap_layer_bounds_pixels.end.y > y_upper_bound:
 			y_upper_bound = tilemap_layer_bounds_pixels.end.y
-	print("im rdy")
 # returns the bounds of the level, used for limiting the camera
 func get_level_bounds() -> Array:
 	return [x_upper_bound, x_lower_bound, y_upper_bound, y_lower_bound]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://drw6w1cr3nry"]
+
+[ext_resource type="Script" uid="uid://4oqks3atre4t" path="res://gravity_orb.gd" id="1_sihuu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ijodc"]
+radius = 34.0147
+
+[node name="GravityOrb" type="Area2D"]
+gravity_space_override = 1
+gravity_point_unit_distance = 6.664
+gravity_point_center = Vector2(1, -1)
+gravity_direction = Vector2(1, -1)
+gravity = 500.0
+linear_damp = 3.92
+angular_damp = 7.83
+script = ExtResource("1_sihuu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ijodc")
+debug_color = Color(0.43, 0, 0.379833, 0.419608)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

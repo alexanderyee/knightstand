@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b58qqvqdkdbb3"]
+
+[ext_resource type="Script" uid="uid://d4cmpmx6x5y7n" path="res://scripts/gravity_zone.gd" id="1_tjc6p"]
+
+[node name="GravityZone" type="Area2D"]
+gravity_space_override = 1
+script = ExtResource("1_tjc6p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
