@@ -10,12 +10,13 @@ const GRAVITY_ZONE_SCENE = preload("res://scenes/gravity_zone.tscn")
 @export var tether_tension := 5.0
 @export var friction := 7.0
 @export var grav_zone_width := 20.0
-
+@export var max_grav_zones = 2
 
 
 @onready var knight: Knight = $"../Knight"
 
 var grav_zone_ghost: Line2D
+var active_grav_zones := []
 
 func _physics_process(delta: float) -> void:
 	var raw_input := Input.get_vector("move_stand_left", "move_stand_right", "move_stand_up", "move_stand_down")
@@ -59,6 +60,10 @@ func _physics_process(delta: float) -> void:
 		gravity_zone.gravity_direction =  (grav_zone_ghost.points[1] -  grav_zone_ghost.points[0]).normalized()
 		gravity_zone.gravity = 1500.0
 		add_sibling(gravity_zone)
+		active_grav_zones.append(gravity_zone)
+		if active_grav_zones.size() > max_grav_zones:
+			var grav_zone_to_delete = active_grav_zones.pop_front()
+			grav_zone_to_delete.queue_free()
 		grav_zone_ghost.queue_free()
 		print()
 		

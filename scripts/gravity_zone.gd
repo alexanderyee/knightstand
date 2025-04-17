@@ -16,3 +16,5 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
 	if body is Knight:
 		body.is_in_grav = false
+		body.momentum_timer = 0.3  # seconds
+		body.momentum_locked = true
